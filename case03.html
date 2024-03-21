@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case-03</title>
+    <link rel="stylesheet" href="assets/normalize.css">
+
+    <style>
+        body{
+            overflow: hidden;
+        }
+
+        :root{
+            --width:180px;
+            --height:100px;
+        }
+
+
+        div{
+            width: var(--width);
+            height: var(--height);
+            background-color: #ff253a;
+            border-radius: 10px;
+
+            animation-name: aniCase3;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+        @keyframes aniCase3 {
+            0%{
+                margin-left: 0;
+                margin-top: 0;
+            }
+            25%{
+                margin-left: calc(100vw - var(--width));
+                margin-top: 0;
+                background-color: purple;
+                transform: rotate(180deg);
+            }
+            50%{
+                margin-left: calc(100vw - var(--width));
+                margin-top: calc(100vh - var(--height));
+                background-color: blue;
+                transform: rotate(0deg);
+
+            }
+            75%{
+                margin-left:0;
+                margin-top: calc(100vh - var(--height));
+                background-color: orange;
+                transform: rotate(-180deg);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div></div>
+
+</body>
+</html>
